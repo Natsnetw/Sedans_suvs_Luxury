@@ -1,0 +1,145 @@
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Paragraph: hsla(0, 0%, 100%, 0.75);
+    --Primary-color: hsl(0, 0%, 95%);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --font-size: 15px;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+}
+
+section {
+    background: var(--Very-light-gray);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+    max-width: 1200px;
+}
+
+.card-pic {
+    padding: 2.5rem;
+}
+
+.card-pic:first-child {
+    background: var(--Bright-orange);
+    border-radius: 0 7px 7px 0,;
+}
+
+.card-pic:nth-child(2) {
+    background: var(--Dark-cyan);
+}
+
+.card-pic:nth-child(3) {
+    background: var(--Very-dark-cyan);
+    border-radius: 0 7px 7px 0;
+}
+
+.automobile h2 {
+    margin: 2.5rem 0;
+    font-family: "Big Shoulder Display";
+    font-size: 2rem;
+    color: var(--Very-light-gray);
+    text-transform: uppercase;
+}
+
+.automobile p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: var(--font-size);
+    color: var(--Transparent-white);
+    font-weight: 400;
+    padding: 0.5rem 0rem;
+    line-height: 1.5;
+}
+
+.automobile button {
+    background: var(--Very-light-gray);
+    font-size: var(--font-size);
+    margin-top: 5rem;
+    border-radius: 2rem;
+    padding: 0.8rem 2rem;
+    border: 0.5px;
+    transition: all 150ms;
+    cursor: pointer;
+}
+
+.card-pic:first-child button {
+    color: var(--Bright-orange);
+}
+
+.card-pic:nth-child(2) button {
+    color: var(--Dark-cyan);
+}
+
+.card-pic:nth-child(3) button {
+    color: var(--Very-dark-cyan);
+}
+
+.automobile button:hover {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+@media  screen and (max-width: 1440px) {
+    .container {
+        width: 90%;
+    }
+
+    .card-pic {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    section {
+        padding: 3rem 0;
+    }
+    .container {
+        flex-direction: column;
+        width: 80%;
+    }
+    .card-pic {
+        padding: 2.5rem 4rem;
+    }
+    .card-pic:first-child {
+        border-radius: 7px 7px 0 0;
+    }
+    .card-pic:nth-child(3) {
+        border-radius: 0 0 7px 7px;
+    }
+    .automobile button {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 90%;
+    }
+    .card-pic {
+        padding: 2.5rem;
+    }
+}
